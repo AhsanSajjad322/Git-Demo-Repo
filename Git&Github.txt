@@ -1,0 +1,77 @@
+Git:
+- Version Control System -> helps to track changes in our project and also collaborate
+Github: 
+- A website where we host repositories online
+- Thus, github is based on git, means the same thing which git(a tool) does is now performed by 
+    github(webite).
+
+Famous Github Commands:
+- git config --list : listing your github credentials
+- git config --global.user "Username" : configuring Username of git account
+- git config --global.email "email@gmail.com" : configuring email of git account
+- git clone link : here link of your repo HTTP, thus cloned your repo in local storage
+- git status : display the status of code
+File Status Life Cycle:-
+1) untracked -> git doesnot know about this file. To track them, we add those files 
+2) unmodified -> no change in file (normal state of file)
+3) modified -> whenever changes made in a file though at this stage git has already tracked this file, 
+                then 2 step process to make it unmodified i-e staged, unmodified
+4) staged -> we commit file at this stage to make it unmodified
+Commit:
+    Is a 2 step process, add then commit
+- whenever some modifed files, when we add them, their status changes to staged, then when commit,
+    status changes to unmodified
+- git add filename : add the untracked file, thus, it's status becomes staged
+- git add . : add all files, thus ready to be committed, even modified files as well
+- git commit -m "message" : record of the change, thus commit is 1 set of reasonable good related
+                            changes
+- git push origin main : to upload local repo content to remote repo
+- git init : to make folder in our system a git initialized(recognized) folder
+- git remote add origin link : thus, this adds the origin(repo link) to your system repo, thus is now
+                                becomes aware that where to push this code
+- git remote -v : to see/verify the origin of repo
+- git push -u origin main : by writing this it means that origin has been set, so next time we can only
+                            write git push. -u means that upstream setted
+- git commit -am "message" : Whenever a small change on some tracked file
+- git branch : to see/verify branch of our current repo 
+- git branch -M main : to change the name of master branch(default previously) to main branch
+                        (new default) by github 
+- git checkout newBranch : to navigate from current branch to newBranch
+- git checkout -b newBranchName : to create a new branch and switch to it
+- git branch -d branchName : to delete a branch
+- git merge newBranch : merge current branch with newBranch
+- git log : Displays the info of all commits of current branch
+
+Merging Code/Branches:-
+- Pull Request(PR) : It lets you tell others the changes you have pushed to a branch in Github Repo 
+- Conflicts arise when in main branch same change occur in same file in same place as in your branch
+    to Github becomes confused to take which change
+- When branched PR is accepted and merged with the main branch, we can delete that feature branch
+
+- git pull origin main : used to fetch and download content from a remote repo and immediately 
+                        update the local repo to match the content
+
+Merge Conflicts:-
+    An event which takes place when git in unable to automatically resolve differences in code 
+    between 2 commits
+- Accept current change : means if you are in main branch then accept the change of main branch and 
+                            ignore changes of feature branch
+- Accept Incoming change : take changes of feature and ignore changes of main
+- Accept Both changes : do both changes
+- Compare changes : 
+
+Fixing Mistakes:
+1) Staged Changes:
+ - git reset filename : reset/unstaged the changes of this file you have git added
+ - git reset : reset/unstaged the recent changes of all files you have git added
+2) Committed changes :
+ - git reset HEAD~1 : to delete/reset the last commityou have done. Head stores the pointer for 
+                     the commmits done
+3) commited changes (for many commits) :
+ - git reset HashedValue : to move the commit count to this particular commit, and then commmits
+                            after this are deleted but data of that commits remains in files
+ - git reset --hard HashedValue : if we want that data must also be removed of that commits
+
+Fork : A new repo that shares code and visibility settings with the original "upstream" repo
+    - It is a rough copy
+
