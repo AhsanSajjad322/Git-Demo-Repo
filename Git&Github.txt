@@ -15,7 +15,7 @@ File Status Life Cycle:-
 1) untracked -> git doesnot know about this file. To track them, we add those files 
 2) unmodified -> no change in file (normal state of file)
 3) modified -> whenever changes made in a file though at this stage git has already tracked this file, 
-                then 2 step process to make it unmodified i-e staged, unmodified
+                then 2 step process to make it unmodified i-e staged(add), commit
 4) staged -> we commit file at this stage to make it unmodified
 Commit:
     Is a 2 step process, add then commit
@@ -32,7 +32,7 @@ Commit:
 - git remote -v : to see/verify the origin of repo
 - git push -u origin main : by writing this it means that origin has been set, so next time we can only
                             write git push. -u means that upstream setted
-- git commit -am "message" : Whenever a small change on some tracked file
+- git commit -am "message" : Whenever a small change on some tracked file, thus add,commit simultaneously
 - git branch : to see/verify branch of our current repo 
 - git branch -M main : to change the name of master branch(default previously) to main branch
                         (new default) by github 
@@ -44,8 +44,8 @@ Commit:
 
 Merging Code/Branches:-
 - Pull Request(PR) : It lets you tell others the changes you have pushed to a branch in Github Repo 
-- Conflicts arise when in main branch same change occur in same file in same place as in your branch
-    to Github becomes confused to take which change
+- Conflicts arise when in main branch when same change occur in same file in same place as in your 
+    made branch, so Github becomes confused to take which change
 - When branched PR is accepted and merged with the main branch, we can delete that feature branch
 
 - git pull origin main : used to fetch and download content from a remote repo and immediately 
@@ -54,6 +54,7 @@ Merging Code/Branches:-
 Merge Conflicts:-
     An event which takes place when git in unable to automatically resolve differences in code 
     between 2 commits
+Solutions given by VS code ->
 - Accept current change : means if you are in main branch then accept the change of main branch and 
                             ignore changes of feature branch
 - Accept Incoming change : take changes of feature and ignore changes of main
@@ -62,16 +63,16 @@ Merge Conflicts:-
 
 Fixing Mistakes:
 1) Staged Changes:
- - git reset filename : reset/unstaged the changes of this file you have git added
+ - git reset filename : reset/unstaged the recent changes of this file you have git added
  - git reset : reset/unstaged the recent changes of all files you have git added
 2) Committed changes :
- - git reset HEAD~1 : to delete/reset the last commityou have done. Head stores the pointer for 
+ - git reset HEAD~1 : to delete/reset the last commit you have done. Head stores the pointer for 
                      the commmits done
 3) commited changes (for many commits) :
  - git reset HashedValue : to move the commit count to this particular commit, and then commmits
                             after this are deleted but data of that commits remains in files
  - git reset --hard HashedValue : if we want that data must also be removed of that commits
+-> NOTE: HashedValue is taken by writing command git log
 
 Fork : A new repo that shares code and visibility settings with the original "upstream" repo
     - It is a rough copy
-
