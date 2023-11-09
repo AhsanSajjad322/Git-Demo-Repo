@@ -31,10 +31,10 @@ Commit:
                                 becomes aware that where to push this code
 - git remote -v : to see/verify the origin of repo
 - git push -u origin main : by writing this it means that origin has been set, so next time we can only
-                            write git push. -u means that upstream setted
+                            write git push command. -u means that upstream setted
 - git commit -am "message" : Whenever a small change on some tracked file, thus add,commit simultaneously
 - git branch : to see/verify branch of our current repo 
-- git branch -M main : to change the name of master branch(default previously) to main branch
+- git branch -M main : to change the name of master branch(default name previously) to main branch
                         (new default) by github 
 - git checkout newBranch : to navigate from current branch to newBranch
 - git checkout -b newBranchName : to create a new branch and switch to it
@@ -44,7 +44,7 @@ Commit:
 
 Merging Code/Branches:-
 - Pull Request(PR) : It lets you tell others the changes you have pushed to a branch in Github Repo 
-- Conflicts arise when in main branch when same change occur in same file in same place as in your 
+- Conflicts arise when in main branch same change occur in same file in same place as in your own
     made branch, so Github becomes confused to take which change
 - When branched PR is accepted and merged with the main branch, we can delete that feature branch
 
@@ -59,12 +59,12 @@ Solutions given by VS code ->
                             ignore changes of feature branch
 - Accept Incoming change : take changes of feature and ignore changes of main
 - Accept Both changes : do both changes
-- Compare changes : 
+- Compare changes : by yourself
 
-Fixing Mistakes:
+Fixing Changes Made Mistakenly:
 1) Staged Changes:
  - git reset filename : reset/unstaged the recent changes of this file you have git added
- - git reset : reset/unstaged the recent changes of all files you have git added
+ - git reset : reset/unstaged the recent changes of all files you have git added(staged)
 2) Committed changes :
  - git reset HEAD~1 : to delete/reset the last commit you have done. Head stores the pointer for 
                      the commmits done
